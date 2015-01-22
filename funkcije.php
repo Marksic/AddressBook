@@ -27,4 +27,6 @@ function clean($dbcon, $param) {
 	$cleaned = mysqli_real_escape_string($dbcon, strip_tags(trim($param)));
 	return $cleaned;
 }
+
+// Prema PHP dokumentaciji u script fajlovima preporucuje se izbegavanje php taga
 ?>
