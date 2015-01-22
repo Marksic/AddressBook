@@ -28,6 +28,6 @@ function clean($dbcon, $param) {
 	return $cleaned;
 }
 
-// Prema PHP dokumentaciji u script fajlovima preporucuje se izbegavanje php taga
+
 
 ?>
