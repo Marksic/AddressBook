@@ -29,4 +29,5 @@ function clean($dbcon, $param) {
 }
 
 // Prema PHP dokumentaciji u script fajlovima preporucuje se izbegavanje php taga
+
 ?>
