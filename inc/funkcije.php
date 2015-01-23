@@ -1,16 +1,14 @@
 <?php
-/* Coded by: Borivoje Manasijevic
-   manasijevic.bora@gmail.com
-   File name: funkcije.php
-   Description: Fajl sa custom funkcijama koje ce se koristiti kroz veci deo projekta
-*/
+// Naziv fajla: funkcije.php
 
-// Konekcija na bazu
-DEFINE("HOST", "");
+// Konstante za konekciju na bazu, naknadno treba popuniti
+DEFINE("HOST", ""); 
 DEFINE("USER", "");
 DEFINE("PASS", "");
 DEFINE("DB", "");
+/////////////////////////
 
+// Konektovanje na bazu
 function doDB() {
 	global $dbcon;
 	$dbcon = mysqli_connect(HOST, USER, PASS, DB);
@@ -21,13 +19,13 @@ function doDB() {
 	}
 	mysqli_set_charset($dbcon, "utf-8");
 }
+////////////////////////
 
-// Custom clean funkcija : za preciscavanje inputa iz html forme
+// "Preciscavanje user input-a iz forme"
 function clean($dbcon, $param) {
 	$cleaned = mysqli_real_escape_string($dbcon, strip_tags(trim($param)));
 	return $cleaned;
 }
-
-
+////////////////////////
 
 ?>
